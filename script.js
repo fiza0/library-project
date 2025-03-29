@@ -7,5 +7,6 @@ function Book(name,pages,author,readStatus){
     this.readStatus=readStatus;
 }
 function addBookToLibrary(name,pages,author,readStatus){
-    
+    entry=new Book(name,pages,author,readStatus);
+    myLibrary.push(entry);
 }
