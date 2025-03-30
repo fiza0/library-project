@@ -18,9 +18,10 @@ function showBooks(){
         container.classList.add("book-container");
         for (prop in entry){
             if(this.prop!="id"){
-            container.textContent+=`${this.prop}+<br>`;
+            container.innerHTML+=`${this.prop}:${entry[prop]}`+'<br>';
             }
         }
+        display.appendChild(container);
     })
 }
 addBookToLibrary("lotr","100","tolkien","true");
