@@ -17,9 +17,12 @@ function showBooks(){
         container=document.createElement("div");
         container.classList.add("book-container");
         for (prop in entry){
-            if(prop!=id){
+            if(this.prop!="id"){
             container.textContent+=`${this.prop}+<br>`;
             }
         }
     })
 }
+addBookToLibrary("lotr","100","tolkien","true");
+addBookToLibrary("wow","100","grrm","true");
+showBooks();
