@@ -17,12 +17,15 @@ function showBooks(){
         container=document.createElement("div");
         container.classList.add("book-container");
         for (prop in entry){
-            if(this.prop!="id"){
+            if(this.prop!="id"&&this.prop!="toggleReadStatus"){
             container.innerHTML+=`${this.prop}:${entry[prop]}`+'<br>';
             }
         }
         display.appendChild(container);
     })
+}
+Book.prototype.toggleReadStatus=function(){
+    this.readStatus=!(this.readStatus)
 }
 addBookToLibrary("lotr","100","tolkien","true");
 addBookToLibrary("wow","100","grrm","true");
